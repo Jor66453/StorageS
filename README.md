@@ -19,7 +19,7 @@ end
 local localPlayer = game.Players.LocalPlayer
 
 if checkBan(localPlayer.UserId) then
-    localPlayer:Kick("You have been banned off the GUI for 1 hour. Reason: RUINING MY ANGEL SERVER")
+    localPlayer:Kick("You have been banned off the GUI for 25 minutes. Reason: RUINING MY ANGEL SERVER")
     return -- Stop the script from running any further
 end
 
