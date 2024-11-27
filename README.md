@@ -1,6 +1,29 @@
--- StorageSN
+-- List of banned user IDs
+local bannedIDs = {
+    7623606814,  -- Replace with actual user IDs
+    4484183429,
+    456789123
+}
 
+-- Function to check if the player is banned
+local function checkBan(userId)
+    for _, bannedId in ipairs(bannedIDs) do
+        if userId == bannedId then
+            return true
+        end
+    end
+    return false
+end
 
+-- Get Local Player and Check Ban Before Running Script
+local localPlayer = game.Players.LocalPlayer
+
+if checkBan(localPlayer.UserId) then
+    localPlayer:Kick("You have been banned off the GUI for 1 hour. Reason: RUINING MY ANGEL SERVER")
+    return -- Stop the script from running any further
+end
+
+-- Rest of the script only runs if the player is NOT banned
 print("SuperNatural Script: Loading..")
 print("Loaded!")
 
@@ -22,15 +45,7 @@ local Window = Rayfield:CreateWindow({
         Invite = "H66dDfrS4Q",
         RememberJoins = false 
     },
-    KeySystem = false,  -- Enable the key system
-    KeySettings = {
-        Title = "Key System",
-        Subtitle = "Please Enter A Key To Access The Script!",
-        Note = "The Key is in the discord",
-        FileName = "Key",
-        SaveKey = true,
-        Key = {"NotterPlayjyfoxHACEKA#GSuslrrvi65753eSlsurvielslasherherKey689786549583"}  -- Set your desired key here
-    }
+    KeySystem = false
 })
 
 -- Create tabs
