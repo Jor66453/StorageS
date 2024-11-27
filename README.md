@@ -1,7 +1,7 @@
 -- List of banned user IDs
 local bannedIDs = {
-    7623606814,  -- Replace with actual user IDs
-    4484183429,
+    345673454,  -- Replace with actual user IDs
+    34567234523,
     456789123
 }
 
@@ -19,7 +19,7 @@ end
 local localPlayer = game.Players.LocalPlayer
 
 if checkBan(localPlayer.UserId) then
-    localPlayer:Kick("You have been banned off the GUI for 25 minutes. Reason: RUINING MY ANGEL SERVER")
+    localPlayer:Kick("You have been banned off the GUI. Reason: ")
     return -- Stop the script from running any further
 end
 
