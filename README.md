@@ -234,7 +234,15 @@ local jumpPowerSlider = MainTab:CreateSlider({
 })
 
 MainTab:CreateButton({
-    Name = "Unalive Yourself",
+    Name = "Unalive Yourself (Normal)",
+    Callback = function()
+    game.Players.LocalPlayer.Character.Humanoid.MaxHealth = 0
+    game.Players.LocalPlayer.Character.Humanoid.Health = 0
+    end
+})
+
+MainTab:CreateButton({
+    Name = "Unalive Yourself (Bypasses God-Mode)",
     Callback = function()
 game.Players.LocalPlayer.Character.OtherScripts.DiedEffects.Shatter:FireServer()
     end
