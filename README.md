@@ -1203,6 +1203,13 @@ SigmaTab:CreateButton({
     end
 })
 
+SigmaTab:CreateButton({
+    Name = "Revive Player (Must Be Dear Dead Body)",
+    Callback = function()
+        game:GetService("ReplicatedStorage").Events.ResWitch:FireServer()
+    end
+})
+
 MainTab:CreateInput({
    Name = "Strangle Specific Player",
    CurrentValue = "",
